@@ -1,0 +1,12 @@
+.square{
+    width:125px ;
+    height: 125px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding:17px;
+    border-radius: 23px;
+    font-size: 13px;
+    font-weight: normal;
+}

@@ -1,0 +1,24 @@
+*{
+  color:#353B38;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+.App {
+  text-align: center;
+}
+
+
+
+
+.App-header {
+  padding-bottom: 30px;
+  padding-top: 30px;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  color: white;
+  background-color: rgba(255, 0, 0, 0);
+}
+

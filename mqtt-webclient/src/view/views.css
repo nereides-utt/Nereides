@@ -1,0 +1,10 @@
+.mainContainer{
+    width: 100%;
+    height: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(0, 128, 0, 0);
+}

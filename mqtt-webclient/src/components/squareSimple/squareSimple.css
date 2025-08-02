@@ -1,0 +1,14 @@
+.squareTitle{
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-between;
+
+}
+.squareValue{
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 65px;
+}

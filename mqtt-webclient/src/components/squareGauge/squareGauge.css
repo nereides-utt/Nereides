@@ -1,0 +1,31 @@
+
+.squareTitle{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 600;
+
+}
+.squareGaugeValue{
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 45px;
+}
+.squareGaugeWrapper{
+    height: 17px;
+    width: 100%;
+    background-color: #E9E9E9;
+    border-radius: 10px;
+
+}
+.squareGaugeProgress{
+    width: 80%;
+    height: 17px;
+    border-radius: 10px;
+    background-color: #2F825B;
+
+
+}

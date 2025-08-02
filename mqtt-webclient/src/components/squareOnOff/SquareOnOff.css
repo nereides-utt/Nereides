@@ -1,0 +1,69 @@
+.squareTitle{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.squareValue{
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 80px;
+}
+
+
+.coloredDot {
+    width: 35px;
+    height: 13px;
+    border-radius: 10px;
+}
+/*-------------------------------------------------------------------------------------*/
+/*2EME COMPOSANT --------------Rectangle Barre de progression----------------------------------------*/
+.sensor2-container {
+    position: relative;
+    width: 250px; /* Deux fois la largeur du carré précédent */
+    height: 120px;
+    background-color: #f2f2f2;
+    padding: 21px 20px 20px 20px; /* top right bottom left */
+    border-radius: 15px; /* Bords arrondis */
+}
+
+.large-text2 {
+    font-size: 60px;
+    font-weight: bold;
+    position:absolute;
+    right:25px;
+    bottom:35px;
+}
+
+.small-text2 {
+    font-size: 25px;
+    position: absolute;
+    top:25px;
+    left: 20px;
+}
+
+.progress-bar-container {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    width: calc(100% - 40px); /* Largeur de la case moins les paddings */
+}
+
+.progress-bar {
+    width: 100%;
+    height: 20px;
+    background-color: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress {
+    width: 50%; /* Réglez la largeur de la barre de chargement ici */
+    height: 100%;
+    background-color: green;
+}
+
+/*-------------------------------------------------------------------------------------*/

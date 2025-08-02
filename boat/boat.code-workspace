@@ -1,0 +1,20 @@
+{
+    "folders": [
+        {
+            "path": "Code/energy"
+        },
+        {
+            "path": "Code/mqtt"
+        },
+        {
+            "path": "Code/cockpit"
+        },
+        {
+            "name": "telemetry",
+            "path": "Code/telemetry/telemetry"
+        }
+    ],
+    "settings": {
+        "platformio-ide.projectDirs": ["Code/energy", "Code/mqtt", "Code/cockpit"]
+    }
+}

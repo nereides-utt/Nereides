@@ -1,0 +1,15 @@
+.navbarButton{
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width:230px;
+    height: 60px;
+    border-radius: 15px;
+
+    background-color: #FFFFFF;
+}
+a.active{
+    background-color: #FFEDBF;
+}
