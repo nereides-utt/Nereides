@@ -16,7 +16,7 @@ void loop() {
     gps.encode(SerialGPS.read());
   }
 
-  // Affichage si nouvelles données
+  // Affichage si nouvelles données grâce à la librairie TinyGps ++, c'est des fonctions déjà intégrer dedans 
   if (gps.location.isUpdated()) {
     Serial.println("------ Données GPS ------");
     Serial.print("Latitude  : "); Serial.println(gps.location.lat(), 6);
