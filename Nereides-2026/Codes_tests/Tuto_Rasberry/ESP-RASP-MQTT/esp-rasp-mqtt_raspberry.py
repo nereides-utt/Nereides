@@ -35,7 +35,7 @@ while True:
                                 for donnee, valeur in mesures.items():
                                         topic = f"raspberry26/{component}/{donnee}"
                                         client.publish(topic, valeur)
-                except json.JSONDeecodeError:
+                except json.JSONDecodeError:
                         print("JSON invalide, ignoré:", data)
 
 
