@@ -53,8 +53,8 @@ client.on_disconnect = on_disconnect
 
 def network_ok():
         try:
-                GPIO.output(LED_connexion, GPIO.HIGH)
                 socket.create_connection(("8.8.8.8", 53), timeout=2)
+                GPIO.output(LED_connexion, GPIO.HIGH)
                 return True
         except OSError:
                 GPIO.output(LED_connexion, GPIO.LOW)
@@ -66,8 +66,8 @@ mqtt_loop_started = False
 def mqtt_thread():
         global mqtt_connected, mqtt_loop_started
         while True:
-                if not mqtt_connected:
-                        if network_ok():
+                if network_ok():
+                        if not mqtt_connected:
                                 try:
                                         if not mqtt_loop_started:
                                                 client.loop_start()
@@ -75,8 +75,9 @@ def mqtt_thread():
                                         client.connect_async(BROKER, PORT, 60)
                                 except Exception as e:
                                         print("MQTT erreur:", e)
-                        else:
-                                GPIO.output(LED_connexion, GPIO.LOW)
+                else:
+                        mqtt_connected = False
+                        GPIO.output(LED_connexion, GPIO.LOW)
                 time.sleep(5)
 
 threading.Thread(target=mqtt_thread, daemon=True).start() #ligne qui lance la fonction ci-dessus pour la co en arriere plan!
