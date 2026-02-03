@@ -1,6 +1,6 @@
 function doPost(e) {
   try {
-    var sheet = SpreadsheetApp.openById("11b5vX6QZdGRNoCQUotirvyUhAKqi1KHWM3dZBYk80gI").getSheetByName("Reception");
+    var sheet = SpreadsheetApp.openById("11b5vX6QZdGRNoCQUotirvyUhAKqi1KHWM3dZBYk80gI").getSheetByName("Reception");  //ID du sheet, à trouver dans son URL ;-)
     var data = JSON.parse(e.postData.contents);
 
     // --- Aplatir le JSON ---
