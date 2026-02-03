@@ -2,7 +2,7 @@ import json
 import requests
 import threading
 
-url = "https://script.google.com/macros/s/AKfycbzhZLerJqkhzzDLyG-WsIQsOeYdQV_sTxpjeH1vv4ZjSy9A3-Tq8aHbPNaxmjknmwavwg/exec"
+url = "https://script.google.com/macros/s/AKfycbzhZLerJqkhzzDLyG-WsIQsOeYdQV_sTxpjeH1vv4ZjSy9A3-Tq8aHbPNaxmjknmwavwg/exec" //URL à changer, donnée par l'app script quand on le déploie
 payload = {
     "sensor1": {"temperature": 2303, "humidity": 5880},
     "sensor2": {"pressure": 'yru'},
