@@ -27,7 +27,7 @@ StaticJsonDocument<128> doc;
   doc["CM"]["RPM"] = RPM;
   String buffer;
   serializeJson(doc, buffer);
-  Serial.println(buffer);   // 🔥 UNE seule commande
-  Serial1.println(buffer);   // 🔥 UNE seule commande
+  Serial.println(buffer);   //  UNE seule commande
+  Serial1.println(buffer);   //  UNE seule commande
   delay(1000);
 }
