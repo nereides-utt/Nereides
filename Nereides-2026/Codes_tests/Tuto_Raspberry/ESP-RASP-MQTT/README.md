@@ -1,6 +1,6 @@
 A partir de v9 inclus, test avec ecran
 
-**La v12  est celle où je me suis arrêté, elle fonctionne, ce qu'il faut changer :**
+**La v12  est celle où je me suis arrêté, elle fonctionne, ce qu'il faut changer :** n\
 Ligne  20 : les valeurs à afficher sur l'écran du pilote
 Ligne 76 : l'url de l'application web Apps Script
 Ligne 90 / 93 : pins pour les leds
