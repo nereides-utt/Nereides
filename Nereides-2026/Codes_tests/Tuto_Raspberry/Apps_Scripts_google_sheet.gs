@@ -38,7 +38,7 @@ function createGraph(name) { //Ajouter le graph sélectionné
   const timestamps = dataSheet.getRange("A2:A");
   const values     = dataSheet.getRange(2, colIndex + 1, dataSheet.getMaxRows(), 1);
 
-  // 🔍 calcul min / max des valeurs
+  // calcul min / max des valeurs
   const valuesData = values.getValues()
     .flat()
     .filter(v => typeof v === "number");
