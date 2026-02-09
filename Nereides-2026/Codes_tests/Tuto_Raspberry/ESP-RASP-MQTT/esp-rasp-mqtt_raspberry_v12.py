@@ -73,7 +73,7 @@ def gui_watcher(): #permet de détecter le branchement / la présence d'un écra
 
 
 #config pour l'envoie sur le google sheet
-url_app_script = "https://script.google.com/macros/s/AKfycbzhZLerJqkhzzDLyG-WsIQsOeYdQV_sTxpjeH1vv4ZjSy9A3-Tq8aHbPNaxmjknmwavwg/exec"
+url_app_script = "https://script.google.com/macros/s/AKfycbwesdgfdhqKK8Dd7ZjY2wosHhbjBCJYVWAxcdTd1WhH3ftWcUitUXAOaH5MHsKVyG1EqQ/exec"
 
 def send_data_google(payload): #pour envoyer sur le google sheet
         try:
