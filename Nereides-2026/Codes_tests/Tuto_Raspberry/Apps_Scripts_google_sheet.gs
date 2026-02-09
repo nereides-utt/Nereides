@@ -1,22 +1,3 @@
-function onEdit(e) { //Qd on change qqch
-  if (!e) return;
-  Logger.log("Modification détectée : " + e.range.getA1Notation() + " = " + e.value);
-  const sheet = e.range.getSheet();
-  if (sheet.getName() !== "Graphiques") return;
-  
-  const colCheckbox = 2; // colonne B
-  const rowStart = 6; // ligne de départ
-  if (e.range.getColumn() === colCheckbox && e.range.getRow() >= rowStart) {
-    const checked = e.value === "TRUE"; // case cochée ?
-    const name = sheet.getRange(e.range.getRow(), 1).getValue(); // nom de variable en colonne A
-    if (checked) {
-      createGraph(name);
-    } else {
-      removeGraph(name);
-    }
-  }
-}
-
 function createGraph(name) { //Ajouter le graph sélectionné
   const ss = SpreadsheetApp.getActive();
   const sheet = ss.getSheetByName("Graphiques");
@@ -38,7 +19,7 @@ function createGraph(name) { //Ajouter le graph sélectionné
   const timestamps = dataSheet.getRange("A2:A");
   const values     = dataSheet.getRange(2, colIndex + 1, dataSheet.getMaxRows(), 1);
 
-  // calcul min / max des valeurs
+  //calcul min / max des valeurs
   const valuesData = values.getValues()
     .flat()
     .filter(v => typeof v === "number");
@@ -57,7 +38,7 @@ function createGraph(name) { //Ajouter le graph sélectionné
     .setChartType(Charts.ChartType.LINE)
     .addRange(timestamps)
     .addRange(values)
-    .setPosition(chartRow, 4, 0, 0)
+    .setPosition(chartRow, 5, 0, 0)
     .setOption("title", name)
     .setOption("hAxis.title", "Timestamp")
     .setOption("hAxis.format", "yyyy-MM-dd HH:mm:ss")
@@ -70,14 +51,28 @@ function createGraph(name) { //Ajouter le graph sélectionné
   sheet.insertChart(chart);
 }
 
-function removeGraph(name) { //Retirer le graph décoché
-  const sheet = SpreadsheetApp.getActive().getSheetByName("Graphiques");
-  const charts = sheet.getCharts();
-  charts.forEach(c => {
-    if (c.getOptions().get("title") === name) {
-      sheet.removeChart(c);
+function onEdit(e) { //Qd on change qqch
+  if (!e) return;
+  const sheet = e.range.getSheet();
+  if (sheet.getName() !== "Graphiques") return;
+
+  if (e.range.getA1Notation() === "D2") {
+        sheet.getRange("D3").setValue("En cours de fabrication...");
+
+    const name = e.value; // le texte entré dans la cellule
+    
+    // Vérifier si un graphique existe déjà
+    const existing = sheet.getCharts().filter(c => c.getOptions().get("title") === name);
+    if (existing.length === 0) {
+      createGraph(name);  // créer le graph
     }
-  });
+// Vider E6 après traitement
+    sheet.getRange("D2").setValue("Saisir la valeur à afficher...");
+    sheet.getRange("D3").setValue("Graph généré !!!");
+    SpreadsheetApp.flush();  
+    Utilities.sleep(2000); // 5000 ms = 5 secondes
+    sheet.getRange("D3").setValue("");
+ }
 }
 
 
