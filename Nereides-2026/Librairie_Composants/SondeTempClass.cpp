@@ -1,5 +1,4 @@
 #include "OneWire.h"
-#include <stdint.h>
 #include "SondeTempClass.hpp"
 
 SondeTemp::SondeTemp(uint8_t tempPin, uint32_t CANIdentifier, bool printing = false)
@@ -43,5 +42,6 @@ void SondeTemp::decodeCanFrame(const CanFrame &frame) {
 
   if (printing) Serial.println("<-- Temperature reçue via CAN : %.2f -->", temperature.val / 100.0f);
 }
+
 
 void SondeTemp::
