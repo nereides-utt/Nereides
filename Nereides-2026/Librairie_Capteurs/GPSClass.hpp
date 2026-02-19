@@ -31,4 +31,5 @@ class GPSClass : public Sensor {
 
 };
 
+
 #endif
