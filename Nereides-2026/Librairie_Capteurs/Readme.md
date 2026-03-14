@@ -6,8 +6,7 @@ Cela a pour avantage de rendre les scripts utilisant différents composants à l
 On a par exemple pour la sonde de température :
 
 ```cpp
-#include "SondeTempClass.hpp"
-#include "
+#include "SondeTempClass.hpp"*
 
 SondeTemp sonde(4, 0x13, printing=true); //Pin de la sonde, ID de la trame CAN utilisée, affichage dans le Serial de l'état de la sonde.
 
