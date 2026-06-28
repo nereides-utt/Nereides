@@ -10,8 +10,8 @@
 #define CAN_RX 21
 
 // IDs CAN arbitraires pour le BMS (À adapter selon ton besoin)
-#define CAN_ID_BMS_GLOBAL   0x101
-#define CAN_ID_BMS_CELLS    0x102
+#define CAN_ID_BMS_GLOBAL   0x211
+#define CAN_ID_BMS_CELLS    0x212
 
 CanFrame txFrame;
 
