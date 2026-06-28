@@ -8,3 +8,4 @@ Batterie 2 : aa:c2:37:0a:b0:dc
 Ensuite, on l'envoie en can sur le bus, avec pour ID:
 0x211 et 0x212 pour la batterie 1
 0x221 et 0x222 pour la batterie 2
+Tableau associé : https://docs.google.com/spreadsheets/d/15oHraxYrT0HqVQ3gSS0AsD-JmoR_8Cuk5-yZKJqkuQ8/edit?gid=0#gid=0
